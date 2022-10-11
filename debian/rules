@@ -1,0 +1,17 @@
+#!/usr/bin/make -f
+
+PACKAGE = $(shell dh_listpackages)
+TMP     = $(CURDIR)/debian/$(PACKAGE)
+
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
+%:
+	dh $@
+
+override_dh_auto_build:
+	dh_auto_build
+	pod2text Changes.pod > CHANGES
+
+override_dh_auto_install:
+	dh_auto_install
+	$(RM) -v $(TMP)/usr/share/man/man3/Set::Changes.3pm

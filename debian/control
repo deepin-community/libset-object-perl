@@ -1,0 +1,32 @@
+Source: libset-object-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: gregor herrmann <gregoa@debian.org>,
+           Niko Tyni <ntyni@iki.fi>,
+           Damyan Ivanov <dmn@debian.org>,
+           Ansgar Burchardt <ansgar@debian.org>,
+           Peter Pentchev <roam@ringlet.net>
+Section: perl
+Testsuite: autopkgtest-pkg-perl
+Priority: optional
+Build-Depends: debhelper-compat (= 13),
+               libmoose-perl <!nocheck>,
+               libtest-leaktrace-perl <!nocheck>,
+               libtest-pod-coverage-perl <!nocheck>,
+               libtest-pod-perl <!nocheck>,
+               perl-xs-dev,
+               perl:native
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/perl-team/modules/packages/libset-object-perl
+Vcs-Git: https://salsa.debian.org/perl-team/modules/packages/libset-object-perl.git
+Homepage: https://metacpan.org/release/Set-Object
+Rules-Requires-Root: no
+
+Package: libset-object-perl
+Architecture: any
+Depends: ${misc:Depends},
+         ${perl:Depends},
+         ${shlibs:Depends}
+Description: collection of objects without duplications
+ Set::Object module implements a Set of objects, that is, a collection of
+ objects without duplications. It is similar to a Smalltalk
+ IdentitySet.

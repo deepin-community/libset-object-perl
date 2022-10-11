@@ -1,0 +1,29 @@
+Description: Fix some typographical errors.
+Bug: https://rt.cpan.org/Ticket/Display.html?id=123608
+Forwarded: https://rt.cpan.org/Ticket/Display.html?id=123608
+Author: Peter Pentchev <roam@ringlet.net>
+Reviewed-by: gregor herrmann <gregoa@debian.org>
+Last-Update: 2021-01-18
+
+--- a/Changes.pod
++++ b/Changes.pod
+@@ -287,7 +287,7 @@
+ 
+ =item *
+ 
+-Remove threads test which had inadvertantly slipped into the MANIFEST
++Remove threads test which had inadvertently slipped into the MANIFEST
+ from source control, and add comprehensive documentation on the state
+ of thread support in this module.
+ 
+--- a/Object.xs
++++ b/Object.xs
+@@ -922,7 +922,7 @@
+       s->is_weak = 0;
+ 
+    /* Here are some functions from Scalar::Util; they are so simple,
+-      that it isn't worth making a dependancy on that module. */
++      that it isn't worth making a dependency on that module. */
+ 
+ int
+ is_int(sv)
